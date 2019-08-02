@@ -122,6 +122,7 @@ class PaymentsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
+                //$responseBody->seek(0);
                 $content = $responseBody->getContents();
                 if ($returnType !== 'string') {
                     $content = json_decode($content);
@@ -729,6 +730,7 @@ class PaymentsApi
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
+                //$responseBody->seek(0);
                 $content = $responseBody->getContents();
                 if ($returnType !== 'string') {
                     $content = json_decode($content);
