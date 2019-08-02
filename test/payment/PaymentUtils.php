@@ -20,6 +20,7 @@ use Cardpay\test\Constants;
 use DateTime;
 use Exception;
 use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 
 class PaymentUtils
@@ -197,6 +198,11 @@ class PaymentUtils
     public function getConfig()
     {
         return $this->config;
+    }
+
+    public function setClient(Client $client)
+    {
+        $this->client = $client;
     }
 
     /**
