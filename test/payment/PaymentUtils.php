@@ -193,6 +193,14 @@ class PaymentUtils
     }
 
     /**
+     * @param PaymentsApi $paymentsApi
+     */
+    public function setPaymentsApi($paymentsApi)
+    {
+        $this->paymentsApi = $paymentsApi;
+    }
+
+    /**
      * @return Configuration
      */
     public function getConfig()
@@ -206,6 +214,14 @@ class PaymentUtils
     }
 
     /**
+     * @param Configuration $config
+     */
+    public function setConfig($config)
+    {
+        $this->config = $config;
+    }
+
+    /**
      * @return Client
      */
     public function getClient()
@@ -214,10 +230,26 @@ class PaymentUtils
     }
 
     /**
+     * @param Client $client
+     */
+    public function setClient($client)
+    {
+        $this->client = $client;
+    }
+
+    /**
      * @return HeaderSelector
      */
     public function getHeaderSelector()
     {
         return $this->headerSelector;
+    }
+
+    /**
+     * @param HeaderSelector $headerSelector
+     */
+    public function setHeaderSelector($headerSelector)
+    {
+        $this->headerSelector = $headerSelector;
     }
 }
