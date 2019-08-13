@@ -230,14 +230,6 @@ class PaymentUtils
     }
 
     /**
-     * @param Client $client
-     */
-    public function setClient($client)
-    {
-        $this->client = $client;
-    }
-
-    /**
      * @return HeaderSelector
      */
     public function getHeaderSelector()
